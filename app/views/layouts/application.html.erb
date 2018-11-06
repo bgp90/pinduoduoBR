@@ -6,12 +6,164 @@
     <title>TODO</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+
   </head>
   <body>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <div class="navbar-wagon">
+      <!-- Logo -->
+      <a href="/" class="navbar-wagon-brand">
+        <img src="<%= asset_url "precito.png"%>" alt="logo">
+      </a>
+
+      <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Categorias</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Ofertas Rápidas</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Download App</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Ajuda</a>
+
+        <!-- Profile picture with dropdown list -->
+        <div class="navbar-wagon-item">
+          <div class="dropdown">
+            <img src="https://kitt.lewagon.com/placeholder/users/quantfy" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <li><a href="#">Perfil</a></li>
+              <li><a href="#">Sair</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <!-- Dropdown appearing on mobile only -->
+      <div class="navbar-wagon-item hidden-md hidden-lg">
+         <div class="dropdown">
+          <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Ofertas Rápidas</a></li>
+            <li><a href="#">Download App</a></li>
+            <li><a href="#">Ajuda</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="main_content">
+      <!-- Carousel -->
+      <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="7000" id="bs-carousel">
+
+        <div class="overlay"></div>
+
+        <ol class="carousel-indicators">
+          <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#bs-carousel" data-slide-to="1"></li>
+          <li data-target="#bs-carousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="item slides active">
+            <div class="slide-1"></div>
+            <div class="hero">
+              <hgroup>
+                  <h1>We are creative</h1>
+                  <h3>Get start your next awesome project</h3>
+              </hgroup>
+              <button class="btn btn-hero btn-lg" role="button">See all features</button>
+            </div>
+          </div>
+          <div class="item slides">
+            <div class="slide-2"></div>
+            <div class="hero">
+              <hgroup>
+                  <h1>We are smart</h1>
+                  <h3>Get start your next awesome project</h3>
+              </hgroup>
+              <button class="btn btn-hero btn-lg" role="button">See all features</button>
+            </div>
+          </div>
+          <div class="item slides">
+            <div class="slide-3"></div>
+            <div class="hero">
+              <hgroup>
+                  <h1>We are amazing</h1>
+                  <h3>Get start your next awesome project</h3>
+              </hgroup>
+              <button class="btn btn-hero btn-lg" role="button">See all features</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="categories">
+        <div class="header_categories">
+          <span class="categorias"></span class>
+        </div>
+        <ul class="cat-list">
+          <li class"cat-list-item">
+            <div class="large-box">
+              <img class="mini-box-foto" src="//cdn.pinduoduo.com/assets/img/cat_clothes_2.jpg">
+              <div class="mini-box" id="index-3-promo">
+                <div class="pdd-index-glist" avalonctrl="index-cat-shoes" style="">
+                  <ul>
+                      <li class="pi-glist-item">
+                          <img alt="goods" src="http://t00img.yangkeduo.com/goods/images/2018-11-01/94826919df959dd4945adcc9ab9bb0b3.jpeg@750w_1l_50Q.src">
+                          <p class="index-goods-name">南极人】加绒加厚/薄款高腰女裤黑色外穿大码女士打底裤显瘦长裤</p>
+                          <span class="index-goods-price"><b>￥</b><span>14.5</span></span>
+                          <span class="index-goods-mprice">￥<span>168</span></span>
+                      </li>
+                      <li class="pi-glist-item">
+                          <img alt="goods" src="http://t00img.yangkeduo.com/goods/images/2018-10-29/64e527ccbafb8674bd6b25a2513b5dc6.jpeg@750w_1l_50Q.src">
+                          <p class="index-goods-name">贝尔法 早秋新款绣花毛衣女韩版修身针织长袖圆领套头百搭打底衫</p>
+                          <span class="index-goods-price"><b>￥</b><span>29.9</span></span>
+                          <span class="index-goods-mprice">￥<span>199</span></span>
+                      </li>
+                      <li class="pi-glist-item">
+                          <img alt="goods" src="http://t00img.yangkeduo.com/goods/images/2018-10-21/805748793092c56f2a811f44a7b46b54.jpeg@750w_1l_50Q.src">
+                          <p class="index-goods-name">【28.9元限时抢，抢完恢复39元】迹莎 加绒高腰收腹打底裤女大码产后塑形连裤袜显瘦美腿压力裤子</p>
+                          <span class="index-goods-price"><b>￥</b><span>28.9</span></span>
+                          <span class="index-goods-mprice">￥<span>70</span></span>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class"cat-list-item">
+            <div class="large-box">
+              <img class="mini-box-foto" src="//cdn.pinduoduo.com/assets/img/cat_clothes_2.jpg">
+              <div class="mini-box" id="index-3-promo">
+                <div class="pdd-index-glist" avalonctrl="index-cat-shoes" style="">
+                  <ul>
+                      <li class="pi-glist-item">
+                          <img alt="goods" src="http://t00img.yangkeduo.com/goods/images/2018-11-01/94826919df959dd4945adcc9ab9bb0b3.jpeg@750w_1l_50Q.src">
+                          <p class="index-goods-name">南极人】加绒加厚/薄款高腰女裤黑色外穿大码女士打底裤显瘦长裤</p>
+                          <span class="index-goods-price"><b>￥</b><span>14.5</span></span>
+                          <span class="index-goods-mprice">￥<span>168</span></span>
+                      </li>
+                      <li class="pi-glist-item">
+                          <img alt="goods" src="http://t00img.yangkeduo.com/goods/images/2018-10-29/64e527ccbafb8674bd6b25a2513b5dc6.jpeg@750w_1l_50Q.src">
+                          <p class="index-goods-name">贝尔法 早秋新款绣花毛衣女韩版修身针织长袖圆领套头百搭打底衫</p>
+                          <span class="index-goods-price"><b>￥</b><span>29.9</span></span>
+                          <span class="index-goods-mprice">￥<span>199</span></span>
+                      </li>
+                      <li class="pi-glist-item">
+                          <img alt="goods" src="http://t00img.yangkeduo.com/goods/images/2018-10-21/805748793092c56f2a811f44a7b46b54.jpeg@750w_1l_50Q.src">
+                          <p class="index-goods-name">【28.9元限时抢，抢完恢复39元】迹莎 加绒高腰收腹打底裤女大码产后塑形连裤袜显瘦美腿压力裤子</p>
+                          <span class="index-goods-price"><b>￥</b><span>28.9</span></span>
+                          <span class="index-goods-mprice">￥<span>70</span></span>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+    <%= javascript_pack_tag 'application'%>
   </body>
 </html>
