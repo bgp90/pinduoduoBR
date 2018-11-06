@@ -1,0 +1,24 @@
+<h1><%= @product.name %></h1>
+
+<h3> Descrição do produto: </h3>
+<p><%= @product.description %></p>
+
+<h3>Fornecedor</h3>
+<p><%= @product.supplier %></p>
+
+<h3>Preço atual</h3>
+<p><%= @product.current_price %></p>
+
+<h3>Preço médio de mercado</h3>
+<p><%= @product.avg_price %></p>
+
+<h3>Meta de vendas para próximo precito</h3>
+<p><%= @product.sale_goal %></p>
+
+<h3>Produtos vendidos</h3>
+<p><%= @product.sold_count %></p>
+
+<h3>Preço meta (necessária venda de mais x produtos)</h3>
+<p><%= @product.price_goal %></p>
+
+<p><%= link_to "Back To Category", category_path(@product.category_id) %></p>

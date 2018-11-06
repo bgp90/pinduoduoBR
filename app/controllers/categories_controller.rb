@@ -18,7 +18,9 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
+    category_id = params[:id]
+    @category = Category.find(category_id)
+    @products = Product.where(category_id: category_id)
   end
 
   # def edit

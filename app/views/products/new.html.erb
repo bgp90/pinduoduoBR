@@ -1,0 +1,15 @@
+<h1>Create a new product</h1>
+
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :supplier %>
+  <%= f.association :category, :collection => Category.all, :label_method => :name, :value_method => :id  %>
+  <%= f.input :current_price %>
+  <%= f.input :avg_price %>
+  <%= f.input :price_goal %>
+  <%= f.input :sold_count %>
+  <%= f.input :sale_goal %>
+  <%= f.input :remaining_items %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>
