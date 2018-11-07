@@ -1,0 +1,106 @@
+.container {
+
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  max-width: none;
+  height: 450px;
+}
+
+.badge-discount {
+    border-radius: 18%;
+    background: red;
+    width: 122px;
+    height: 72px;
+    text-align: center;
+    padding-top: 7px;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    z-index: 20;
+    right: 30px;
+    top: 15px;
+}
+
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px
+}
+
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+
+
+.product-price {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 32px;
+    padding-bottom: 20px;
+
+}
+
+.product-price i {
+ font-size: 50px;
+}
+
+.product-price i {
+ font-size: 32px;
+}
+
+/* Itens remainig*/
+.itens {
+    background: none;
+    width: 244px;
+    height: 67px;
+    text-align: center;
+    padding-top: 9px;
+    font-size: 18px;
+    color: black;
+    position: absolute;
+    z-index: 20;
+    right: 189px;
+    top: 343px
+}
+
+.itens i {
+  font-size: 50px;
+}
+
+/* Time remainig*/
+.time {
+  background: none;
+    width: 244px;
+    height: 67px;
+    text-align: center;
+    padding-top: 9px;
+    font-size: 18px;
+    color: black;
+    position: absolute;
+    z-index: 20;
+    right: -196px;
+    top: 240px;
+}
+
+
+
+.time div {
+  font-size: 15px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+
+

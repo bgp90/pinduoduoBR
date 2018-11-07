@@ -11,19 +11,28 @@
         <a href="" class="navbar-wagon-item navbar-wagon-link">Ofertas Rápidas</a>
         <a href="" class="navbar-wagon-item navbar-wagon-link">Download App</a>
         <a href="" class="navbar-wagon-item navbar-wagon-link">Ajuda</a>
-        <a href="" class="navbar-wagon-item navbar-wagon-link">Log In</a>
+        <% unless user_signed_in? %>
+          <%= link_to "Log In",  user_session_path, class:"navbar-wagon-item navbar-wagon-link" %>
+        <% end %>
+
 
         <!-- Profile picture with dropdown list -->
-        <div class="navbar-wagon-item">
-          <div class="dropdown">
-            <img src="https://kitt.lewagon.com/placeholder/users/quantfy" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-              <li><a href="#">Perfil</a></li>
-              <li><a href="#">Sair</a></li>
-            </ul>
+
+        <% if user_signed_in? %>
+          <div class="navbar-wagon-item">
+            <div class="dropdown">
+              <img src="https://kitt.lewagon.com/placeholder/users/quantfy" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+              <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+                <li><a href="#">Perfil</a></li>
+                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></li>
+                <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+              </ul>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
+
+
     <!-- Dropdown appearing on mobile only -->
       <div class="navbar-wagon-item hidden-md hidden-lg">
          <div class="dropdown">
@@ -33,7 +42,6 @@
             <li><a href="#">Ofertas Rápidas</a></li>
             <li><a href="#">Download App</a></li>
             <li><a href="#">Ajuda</a></li>
-            <li><a href="#">Log In</a></li>
           </ul>
         </div>
       </div>

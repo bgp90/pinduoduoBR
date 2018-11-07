@@ -12,8 +12,8 @@
   </head>
   <body>
 
-
     <%= render 'shared/navbar'%>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
@@ -22,7 +22,6 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
 
-
-      <%= link_to "sign out", destroy_user_session_path, method: :delete %>
+    <%= render 'shared/footer' %>
   </body>
 </html>
