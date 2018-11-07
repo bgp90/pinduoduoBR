@@ -8,7 +8,9 @@
       <div class = "col xs-12 col-sm-6 col-md-6">
         <li class"cat-list-item">
           <div class="large-box">
-            <img class="large-box-foto" src="<%= asset_url "female_fashion.jpeg"%>" >
+            <%= link_to category_path(1) do%>
+            <%= image_tag Category.all[0].image_name, size: '525x330'%>
+            <%end%>
             <div class="mini-box" id="index-3-promo">
               <div class="pdd-index-glist" avalonctrl="index-cat-shoes" style="">
                 <ul>
@@ -39,7 +41,9 @@
       <div class = "col xs-12 col-sm-6 col-md-6">
         <li class"cat-list-item">
           <div class="large-box">
-            <img class="large-box-foto" src="<%= asset_url "man_fashion.jpeg"%>">
+            <%= link_to category_path(2) do%>
+            <%= image_tag Category.all[1].image_name, size: '525x330'%>
+            <%end%>
             <div class="mini-box" id="index-3-promo">
               <div class="pdd-index-glist" avalonctrl="index-cat-shoes" style="">
                 <ul>
@@ -70,7 +74,9 @@
       <div class = "col xs-12 col-sm-6 col-md-6">
         <li class"cat-list-item">
           <div class="large-box">
-            <img class="large-box-foto" src="<%= asset_url "home.jpeg"%>">
+             <%= link_to category_path(3) do%>
+            <%= image_tag Category.all[2].image_name, size: '525x330'%>
+            <%end%>
             <div class="mini-box" id="index-3-promo">
               <div class="pdd-index-glist" avalonctrl="index-cat-shoes" style="">
                 <ul>
@@ -101,7 +107,9 @@
       <div class = "col xs-12 col-sm-6 col-md-6">
         <li class"cat-list-item">
           <div class="large-box">
-            <img class="large-box-foto" src="<%= asset_url "sports2.jpeg"%>">
+             <%= link_to category_path(4) do%>
+            <%= image_tag Category.all[3].image_name, size: '525x330'%>
+            <%end%>
             <div class="mini-box" id="index-3-promo">
               <div class="pdd-index-glist" avalonctrl="index-cat-shoes" style="">
                 <ul>
