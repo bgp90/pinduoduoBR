@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    # @add_disc = additional_discount
+    @add_disc = additional_discount
   end
 
   # def edit
@@ -39,18 +39,20 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :description, :supplier, :current_price, :avg_price, :price_goal, :sold_count, :sale_goal, :category_id, :avaiable_items)
   end
 
-  # def additional_discount
-  #   if @product.sold_count <= 0.2*@product.remaining_items
-  #     0.02
-  #   elsif @product.sold_count <= 0.4*@product.remaining_items
-  #     0.04
-  #   elsif @product.sold_count <= 0.6*@product.remaining_items
-  #     0.06
-  #   elsif @product.sold_count <= 0.8*@product.remaining_items
-  #     0.08
-  #   else
-  #     0.10
-  #   end
-  # end
+  def additional_discount
+    if @product.sold_count == @product.avaiable_items
+      0.10
+    elsif @product.sold_count >= 0.8*@product.avaiable_items
+      0.08
+    elsif @product.sold_count >= 0.6*@product.avaiable_items
+      0.06
+    elsif @product.sold_count >= 0.4*@product.avaiable_items
+      0.04
+    elsif @product.sold_count >= 0.2*@product.avaiable_items
+      0.02
+    else
+      0
+    end
+  end
 
 end
