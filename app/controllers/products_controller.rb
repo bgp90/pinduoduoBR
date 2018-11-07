@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @add_disc = additional_discount
+    # @add_disc = additional_discount
   end
 
   # def edit
@@ -39,11 +39,8 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :description, :supplier, :current_price, :avg_price, :price_goal, :sold_count, :category_id, :avaiable_items, :initial_price)
   end
 
-  def additional_discount
-    initial_price = @product.current_price
-    total_discount = @product.price_goal - initial_price
-
-
-  end
+  # def additional_discount
+  #   @
+  # end
 
 end
