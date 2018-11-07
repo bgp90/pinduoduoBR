@@ -12,9 +12,11 @@
   </head>
   <body>
 
+
     <%= render 'shared/navbar'%>
     <%= render 'shared/carousel'%>
     <%= render 'shared/cards-main'%>
+
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
@@ -22,5 +24,8 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+
+
+      <%= link_to "sign out", destroy_user_session_path, method: :delete %>
   </body>
 </html>
