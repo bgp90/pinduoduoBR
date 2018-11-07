@@ -1,11 +1,21 @@
 <%= render 'shared/carousel'%>
 <%= render 'shared/cards-main'%>
 
-<% @categories.each do |category|%>
-  <%= link_to category_path(category) do%>
-  <h2><%= category.name %></h2>
-  <%= image_tag category.image_name, size: '100x100' if category.image_name.present?%>
+
+  <%= link_to category_path(1) do%>
+  <%= image_tag Category.all[0].image_name, size: '100x100'%>
   <%end%>
-<% end %>
+
+ <%= link_to category_path(2) do%>
+  <%= image_tag Category.all[1].image_name, size: '100x100'%>
+  <%end%>
+
+   <%= link_to category_path(3) do%>
+  <%= image_tag Category.all[2].image_name, size: '100x100'%>
+  <%end%>
+
+   <%= link_to category_path(4) do%>
+  <%= image_tag Category.all[3].image_name, size: '100x100'%>
+  <%end%>
 
 
