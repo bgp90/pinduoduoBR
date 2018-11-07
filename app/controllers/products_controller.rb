@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @add_disc = additional_discount
+    # @add_disc = additional_discount
   end
 
   # def edit
