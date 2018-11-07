@@ -47,8 +47,8 @@ h4 {
   height: auto;
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
+  // display: flex;
+  // justify-content: space-around;
 }
 
 .cat-list-item {
@@ -69,13 +69,13 @@ h4 {
 .large-box {
   border: 10px solid #e0e2e4;
   font-size: 0;
-  margin: .1rem;
+  margin: 1.1rem;
   // display: block;
 }
 
 .large-box-foto {
-  height: 300px;
-  width: 560px;
+  height: 330px;
+  width: 525px;
   padding-left: 0px;
   padding-right: 0px;
 }
