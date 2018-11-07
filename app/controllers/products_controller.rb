@@ -36,23 +36,14 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :supplier, :current_price, :avg_price, :price_goal, :sold_count, :sale_goal, :category_id, :avaiable_items)
+    params.require(:product).permit(:name, :description, :supplier, :current_price, :avg_price, :price_goal, :sold_count, :category_id, :avaiable_items, :initial_price)
   end
 
   def additional_discount
-    if @product.sold_count == @product.avaiable_items
-      0.10
-    elsif @product.sold_count >= 0.8*@product.avaiable_items
-      0.08
-    elsif @product.sold_count >= 0.6*@product.avaiable_items
-      0.06
-    elsif @product.sold_count >= 0.4*@product.avaiable_items
-      0.04
-    elsif @product.sold_count >= 0.2*@product.avaiable_items
-      0.02
-    else
-      0
-    end
+    initial_price = @product.current_price
+    total_discount = @product.price_goal - initial_price
+
+
   end
 
 end
