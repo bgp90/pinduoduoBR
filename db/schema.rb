@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_11_08_183946) do
+=======
 ActiveRecord::Schema.define(version: 2018_11_08_173720) do
+>>>>>>> 2a840bb823f0783c2fdd5267a7bf27a89f5fabc9
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +39,8 @@ ActiveRecord::Schema.define(version: 2018_11_08_173720) do
     t.datetime "updated_at", null: false
     t.bigint "category_id"
     t.decimal "initial_price"
+    t.string "image1"
+    t.string "image2"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
