@@ -1,3 +1,19 @@
+p {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  color: rgb(72, 72, 72);
+  font-size: 20px;
+}
+
+h4 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
 .catgories {
     margin: 0 auto;
     margin-bottom: .76rem;
@@ -9,16 +25,6 @@
     display: block;
     visibility: visible;
 }
-h4 {
-  text-align: center;
-  font-size: 30px;
-  margin-top: 30px;
-  font-weight: bold;
-  padding-top: 25px;
-  padding-bottom: 50px;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-}
-
 
 .header_categories {
     border-bottom: 1px solid #c1c1c1;
@@ -67,8 +73,9 @@ h4 {
 }
 
 .large-box {
-  border: 10px solid #e0e2e4;
-  font-size: 0;
+  border: 2px solid #ffffff;
+  padding: 4px;
+  font-size: 14px;
   margin: 1.1rem;
   // display: block;
 }
@@ -98,12 +105,11 @@ h4 {
   display: block;
 }
 
-.pdd-index-glist ul {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-}
 
+.pa-goods-img {
+  height: 80%;
+  width: 80%;
+}
 
 .pi-glist-item {
   display: inline-block;
@@ -116,6 +122,13 @@ h4 {
   margin: 0;
   padding: 0;
   visibility: visible;
+}
+
+
+.pdd-index-glist ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 .pdd-index-glist ul li img {
@@ -142,8 +155,3 @@ h4 {
   width: 86%;
 }
 
-p {
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
-  color: rgb(72, 72, 72);
-  font-size: 20px;
-}

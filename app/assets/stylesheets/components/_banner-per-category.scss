@@ -1,4 +1,43 @@
+.banner {
+   color: white;
+    text-align: center;
+    height: 50vh;
+    width: 40hv;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 20;
+    right: 102px;
+    top: 15px;
+}
+
+.banner h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.box {
+  background: white;
+  margin-bottom: 40px;
+}
+
+
+.large-box text-center{
+  background-color: white;
+}
+
 .pa-glist-item-goods {
+  border: 10px solid #e0e2e4;
   background-color: #fff;
   display: inline-block;
   float: left;
@@ -24,6 +63,7 @@
 
 .act-goods-txt {
   margin: 0 auto;
+  font
   max-width: 248px;
   position: relative;
   width: 90%;
@@ -46,4 +86,5 @@
   height: .54rem;
   line-height: .54rem;
 }
+
 
