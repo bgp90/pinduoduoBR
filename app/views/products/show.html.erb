@@ -26,7 +26,15 @@
 
 <h2><%= @add_disc %></h2>
 
+<h3> image 1</h3>
+<%= @product.image1 %>
+
+<h3> image 2</h3>
+<%= @product.image2 %>
+
+
 <p><%= link_to "Back To Category", category_path(@product.category_id) %></p> -->
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -40,18 +48,21 @@
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="https://cdn-03.independent.ie/incoming/article34745524.ece/36598/BINARY/GettyImages-459846776.jpg" alt="...">
+
+
+
+
+      <img src= <%= @product.image1 %> alt="...">
       <div class="carousel-caption">
       </div>
     </div>
     <div class="item">
-      <img src="https://i.pinimg.com/originals/63/18/3b/63183bcd4c00ff9377e7ccfc50bda16d.jpg" alt="...">
+      <img src= <%= @product.image2 %> alt="...">
       <div class="carousel-caption">
 
       </div>
@@ -74,9 +85,9 @@
     <!-- Product Description -->
 <div class="col-sm-6">
     <div class="product-description">
-      <div>Vestuário</div>
-      <h1>Calcinhas Vicoria's Secrets</h1>
-      <p>O seu estilo é você, escolha a sua tendência. Encontre Calcinhas Da Marca Victoria Secret</p>
+      <div><%= @product.category.name %></div>
+      <h1><%= @product.name %></h1>
+      <p><%= @product.description %></p>
     </div>
 
 
@@ -85,13 +96,13 @@
     <div class="product-price">
      <div><i class="fas fa-dollar-sign"></i></div>
       <div>
-        R$ 200,00
+        R$ <%= @product.current_price %>
         Preço Atual
       </div>
 
     <div class="itens">
      <div> <i class="fas fa-sort-amount-down"></i> </div>
-      <div> Faltam 300 itens
+      <div> Faltam <%= @product.avaiable_items %> itens
       para atingir o preço mínimo! </div>
 
     <div class="time">
@@ -113,14 +124,15 @@ hourglass();
 setInterval(hourglass, 3000);
 </script>
 
-      <div> 2 dias
+      <div> 2 dias   <!-- automatizar saporra -->
         tempo restante:
        </div>
     </div>
 
   </div>
   </div>
-  <a href="#" class="btn btn-success">Preciticar para pagar R$ 100,00!!</a>
+
+  <%= link_to "Comprar por R$ #{@product.current_price}0!!", new_product_purchase_path(@product), class: "btn btn-success" %>
+
 </main>
 
-<p>test</p>

@@ -1,16 +1,16 @@
 .banner {
-   color: white;
-    text-align: center;
-    height: 50vh;
-    width: 40hv;
-    background-size: cover !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 20;
-    right: 102px;
-    top: 15px;
+  color: red;
+  text-align: center;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 20;
+  right: 102px;
+  top: 15px;
+  height: 285px;
+  width: 461px;
 }
 
 .banner h1 {
@@ -31,8 +31,11 @@
   margin-bottom: 40px;
 }
 
-
-.large-box text-center{
+.large-box {
+  border: 2px solid #ffffff;
+  padding: 4px;
+  font-size: 14px;
+  margin: 1.1rem;
   background-color: white;
 }
 

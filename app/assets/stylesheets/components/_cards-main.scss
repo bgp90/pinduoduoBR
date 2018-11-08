@@ -2,6 +2,7 @@ p {
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
   color: rgb(72, 72, 72);
   font-size: 20px;
+  margin: 0 0 -3.5px !important;
 }
 
 h4 {
@@ -73,16 +74,17 @@ h4 {
 }
 
 .large-box {
-  border: 2px solid #ffffff;
+  border: 2px solid #gray;
   padding: 4px;
   font-size: 14px;
   margin: 1.1rem;
+  background-color: white;
   // display: block;
 }
 
 .large-box-foto {
   height: 330px;
-  width: 525px;
+  width: 550px;
   padding-left: 0px;
   padding-right: 0px;
 }
