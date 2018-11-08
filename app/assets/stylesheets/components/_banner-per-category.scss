@@ -1,55 +1,49 @@
-.pdd-act-glist ul li {
-  font-size: 0;
-  overflow: hidden;
-}
 
 .pa-glist-item-goods {
-  background-color: #fff;
-  display: inline-block;
-  float: left;
-  margin-right: 2.6%;
-  margin-top: 2.6%;
-  position: relative;
-  vertical-align: top;
-  width: 23%;
-  height: 4rem;
+  // background-color: #fff;
+  // display: inline-block;
+  // float: left;
+  // margin-right: 2.6%;
+  // margin-top: 2.6%;
+  // position: relative;
+  // vertical-align: top;
+  // width: 23%;
+  // height: 4rem;
+  // align-items: center;
+  // justify-content: space-around;
 }
 
-.pdd-act-glist ul li .act-goods-img {
-    margin: 0 auto;
-    margin-bottom: 10%;
-    margin-top: 10%;
-    max-width: 220px;
-    position: relative;
-    width: 2.2rem;
-    height: 2.2rem;
+.act-goods-img {
+  // margin: 0 auto;
+  // margin-bottom: 10%;
+  // margin-top: 10%;
+  // max-width: 220px;
+  // position: relative;
+  // width: 2.2rem;
+  // height: 2.2rem;
 }
 
-.pdd-act-glist ul li .act-goods-txt {
-    margin: 0 auto;
-    max-width: 248px;
-    position: relative;
-    width: 90%;
+.act-goods-txt {
+  // margin: 0 auto;
+  // max-width: 248px;
+  // position: relative;
+  // width: 90%;
 }
 
-.pdd-act-glist ul li img {
-  width: 100%;
+.act-goods-name {
+  // color: #686868;
+  // display: inline-block;
+  // font-size: .16rem;
+  // height: .66rem;
+  // line-height: .22rem;
+  // overflow: hidden;
+  // position: relative;
+  // text-overflow: ellipsis;
+  // width: 100%;
 }
 
-.pdd-act-glist ul li .act-goods-name {
-    color: #686868;
-    display: inline-block;
-    font-size: .16rem;
-    height: .66rem;
-    line-height: .22rem;
-    overflow: hidden;
-    position: relative;
-    text-overflow: ellipsis;
-    width: 100%;
-}
-
-.pdd-act-glist ul li .act-goods-prices {
-    overflow: hidden;
-    height: .54rem;
-    line-height: .54rem;
+.act-goods-prices {
+  // overflow: hidden;
+  // height: .54rem;
+  // line-height: .54rem;
 }
