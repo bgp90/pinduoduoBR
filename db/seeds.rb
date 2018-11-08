@@ -15,8 +15,8 @@ artigos_esportivos.save!
 puts 'Finished!'
 
 
-puts "Create 10 products..."
-10.times do
+puts "Create 50 products..."
+50.times do
   product = Product.create(
     name: Faker::Cannabis.strain,
     description: Faker::Cannabis.medical_use,
