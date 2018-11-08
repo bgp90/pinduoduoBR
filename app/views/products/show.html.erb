@@ -131,21 +131,9 @@ setInterval(hourglass, 3000);
 
   </div>
   </div>
-<<<<<<< HEAD
-  <a href="#" class="btn btn-success">Comprar por R$ <%= @product.current_price %>/un.</a>
-=======
-<!-- <br>
-<form>
-  <div class="form-qty">
-    <label for="formGroupExampleInput">Quantity</label>
-    <input type="text" class="form-control"  placeholder= "Quantity">
-  </div>
-</form>
-<br> -->
 
-  <%= link_to "Preciticar para pagar R$ 100,00!!", new_product_purchase_path(@product), class: "btn btn-success" %>
+  <%= link_to "Comprar por R$ #{@product.current_price}0!!", new_product_purchase_path(@product), class: "btn btn-success" %>
 
->>>>>>> 2a840bb823f0783c2fdd5267a7bf27a89f5fabc9
 </main>
 
 
