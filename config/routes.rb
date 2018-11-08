@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'categories#index'
   resources :categories
   resources :products, except: [:index] do
     resources :purchases, only: [:new, :create]
