@@ -11,6 +11,8 @@
     z-index: 20;
     right: 102px;
     top: 15px;
+    height: 270px;
+    width: 448px;
 }
 .banner h1 {
   font-size: 30px;
@@ -28,4 +30,11 @@
 .box {
   background: white;
   margin-bottom: 40px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 30px;
+  padding-bottom: 11px;
 }
