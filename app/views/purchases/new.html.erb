@@ -1,7 +1,36 @@
-<h1>Purchases#new</h1>
-<p>Find me in app/views/purchases/new.html.erb</p>
 
-<%= simple_form_for [@product, @purchase] do |f| %>
+<div class="boxquantifiy">
+<main class="container">
+  <div class="row">
+    <!-- COLUMN LEFT-->
+   <div class="col-sm-6">
+
+    <img src= <%= @product.image1 %> alt="...">
+  </div>
+
+  <div class="col-sm-6">
+    <div class="product-description">
+      <h1><%= @product.name %></h1>
+      <p><%= @product.description %></p>
+    </div>
+
+    <!-- Product Pricing -->
+    <div class="product-price">
+      <div>
+        R$ <%= @product.current_price %>
+        preço por unidade
+      </div>
+
+      <%= simple_form_for [@product, @purchase] do |f| %>
   <%= f.input :quantity %>
   <%= f.submit "buy", class: "btn btn-primary" %>
 <% end %>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+
+
+
