@@ -1,7 +1,7 @@
 require "faker"
 
 puts 'Creating Categories...'
-roupas_femininas = Category.new(name: "Roupas Femininas", image_name: "female_fashion.jpeg")
+roupas_femininas = Category.new(name: "Roupas Femininas", image_name: "female_fashion.jpg")
 roupas_femininas.save!
 
 roupas_masculinas = Category.new(name: "Roupas Masculinas", image_name: "man_fashion.jpeg")
@@ -17,7 +17,7 @@ puts 'Finished!'
 
 puts "Create 50 products..."
 50.times do
-  product = Product.create(
+  product = Product.create
     name: Faker::Cannabis.strain,
     description: Faker::Cannabis.medical_use,
     supplier: Faker::Cannabis.type,
