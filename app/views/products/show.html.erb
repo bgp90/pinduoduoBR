@@ -28,6 +28,7 @@
 
 <p><%= link_to "Back To Category", category_path(@product.category_id) %></p> -->
 
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -74,9 +75,9 @@
     <!-- Product Description -->
 <div class="col-sm-6">
     <div class="product-description">
-      <div>Vestuário</div>
-      <h1>Calcinhas Vicoria's Secrets</h1>
-      <p>O seu estilo é você, escolha a sua tendência. Encontre Calcinhas Da Marca Victoria Secret</p>
+      <div><%= @product.category.name %></div>
+      <h1><%= @product.name %></h1>
+      <p><%= @product.description %></p>
     </div>
 
 
@@ -85,13 +86,13 @@
     <div class="product-price">
      <div><i class="fas fa-dollar-sign"></i></div>
       <div>
-        R$ 200,00
+        R$ <%= @product.current_price %>
         Preço Atual
       </div>
 
     <div class="itens">
      <div> <i class="fas fa-sort-amount-down"></i> </div>
-      <div> Faltam 300 itens
+      <div> Faltam <%= @product.avaiable_items %> itens
       para atingir o preço mínimo! </div>
 
     <div class="time">
@@ -113,13 +114,13 @@ hourglass();
 setInterval(hourglass, 3000);
 </script>
 
-      <div> 2 dias
+      <div> 2 dias   <!-- automatizar saporra -->
         tempo restante:
        </div>
     </div>
 
   </div>
   </div>
-  <a href="#" class="btn btn-success">Preciticar para pagar R$ 100,00!!</a>
+  <a href="#" class="btn btn-success">Comprar por R$ <%= @product.current_price %>/un.</a>
 </main>
 
