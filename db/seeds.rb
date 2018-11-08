@@ -17,7 +17,7 @@ puts 'Finished!'
 
 puts "Create 50 products..."
 50.times do
-  product = Product.create
+  product = Product.create(
     name: Faker::Cannabis.strain,
     description: Faker::Cannabis.medical_use,
     supplier: Faker::Cannabis.type,
