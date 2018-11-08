@@ -21,15 +21,16 @@ puts "Create 10 products..."
     name: Faker::Cannabis.strain,
     description: Faker::Cannabis.medical_use,
     supplier: Faker::Cannabis.type,
-    current_price: rand(1..500),
-    avg_price: rand(1..500),
-    price_goal: rand(1..500),
-    sold_count: rand((1..500),
-    avaiable_items: rand(1..500),
-    category_id: rand(1..500),
-    initial_price: rand(1..500),
-    image1: "https://picsum.photos/200/300/?random",
-    image2: "https://picsum.photos/200/300/?random")
+    current_price: rand(0..50),
+    avg_price: rand(0..50),
+    price_goal: rand(0..50),
+    sold_count: rand(0..50),
+    avaiable_items: rand(0..50),
+    category_id: rand(0..10),
+    initial_price: rand(0..50),
+    image1: "https://picsum.photos/200/300/?image=#{rand(1..1000)}",
+    image2: "https://picsum.photos/200/300/?image=#{rand(1..1000)}"
+  )
 end
 
 puts "Done creating products"

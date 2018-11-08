@@ -26,6 +26,13 @@
 
 <h2><%= @add_disc %></h2>
 
+<h3> image 1</h3>
+<%= @product.image1 %>
+
+<h3> image 2</h3>
+<%= @product.image2 %>
+
+
 <p><%= link_to "Back To Category", category_path(@product.category_id) %></p> -->
 
 
@@ -41,18 +48,21 @@
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="https://cdn-03.independent.ie/incoming/article34745524.ece/36598/BINARY/GettyImages-459846776.jpg" alt="...">
+
+
+
+
+      <img src= <%= @product.image1 %> alt="...">
       <div class="carousel-caption">
       </div>
     </div>
     <div class="item">
-      <img src="https://i.pinimg.com/originals/63/18/3b/63183bcd4c00ff9377e7ccfc50bda16d.jpg" alt="...">
+      <img src= <%= @product.image2 %> alt="...">
       <div class="carousel-caption">
 
       </div>
