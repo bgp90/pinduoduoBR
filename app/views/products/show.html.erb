@@ -35,28 +35,26 @@
 
 <p><%= link_to "Back To Category", category_path(@product.category_id) %></p> -->
 
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 <main class="container">
-
+  <div class="row">
+    <!-- COLUMN LEFT-->
    <div class="col-sm-6">
-<!-- carrousels-->
+     <!-- discount tag-->
+      <div class="badge-discount">
+        <strong>36%</strong>
+        de desconto!
+      </div>
+    <!-- carrousels-->
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
+    <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-  </ol>
+   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-
-
-
-
       <img src= <%= @product.image1 %> alt="...">
       <div class="carousel-caption">
       </div>
