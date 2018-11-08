@@ -15,15 +15,15 @@ artigos_esportivos.save!
 puts 'Finished!'
 
 
-puts "Create 10 products..."
-10.times do
+puts "Create 50 products..."
+50.times do
   product = Product.create(
     name: Faker::Cannabis.strain,
     description: Faker::Cannabis.medical_use,
     supplier: Faker::Cannabis.type,
-    current_price: rand(0..50),
-    avg_price: rand(0..50),
-    price_goal: rand(0..50),
+    current_price: rand(20..50),
+    avg_price: rand(20..50),
+    price_goal: rand(20..50),
     sold_count: rand(0..50),
     avaiable_items: rand(0..50),
     category_id: rand(0..10),

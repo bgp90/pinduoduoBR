@@ -1,0 +1,7 @@
+<h1>Purchases#new</h1>
+<p>Find me in app/views/purchases/new.html.erb</p>
+
+<%= simple_form_for [@product, @purchase] do |f| %>
+  <%= f.input :quantity %>
+  <%= f.submit "buy", class: "btn btn-primary" %>
+<% end %>
