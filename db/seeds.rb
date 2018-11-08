@@ -4,13 +4,13 @@ puts 'Creating Categories...'
 roupas_femininas = Category.new(name: "Roupas Femininas", image_name: "female_fashion.jpg")
 roupas_femininas.save!
 
-roupas_masculinas = Category.new(name: "Roupas Masculinas", image_name: "man_fashion.jpeg")
+roupas_masculinas = Category.new(name: "Roupas Masculinas", image_name: "man_fashion.jpg")
 roupas_masculinas.save!
 
-eletro = Category.new(name: "Eletrodomésticos", image_name: "home.jpeg")
+eletro = Category.new(name: "Eletrodomésticos", image_name: "home.jpg")
 eletro.save!
 
-artigos_esportivos = Category.new(name: "Artigos Esportivos", image_name: "sports2.jpeg")
+artigos_esportivos = Category.new(name: "Artigos Esportivos", image_name: "sports2.jpg")
 artigos_esportivos.save!
 puts 'Finished!'
 
