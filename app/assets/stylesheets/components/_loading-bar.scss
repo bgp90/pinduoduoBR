@@ -1,0 +1,14 @@
+.ldBar{position:relative;
+      }
+
+.ldBar.label-center > .ldBar-label{position:absolute;top:130%;left:61%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);text-shadow:0 0 3px #fff}
+
+.ldBar-label:after{content:" current price"; display:block;     color: #aaa;
+    margin-left: 4px;
+    font-family: courier new;
+    font-size: 0.8em;
+    font-weight: 250;}
+
+.ldBar.no-percent .ldBar-label:after{content:""}
+
+

@@ -5,7 +5,7 @@
    <div class="col-sm-6">
      <!-- discount tag-->
       <div class="badge-discount">
-        <strong>36%</strong>
+        <strong><%= (@product.avg_price - @product.current_price)/ @product.avg_price * 100 %>%</strong>
         de desconto!
       </div>
     <!-- carrousels-->
@@ -29,7 +29,6 @@
 
       </div>
     </div>
-    ...
   </div>
 
   <!-- Controls -->
@@ -58,14 +57,17 @@
     <div class="product-price">
      <div><i class="fas fa-dollar-sign"></i></div>
       <div>
-        R$ <%= @product.current_price %>
         Preço Atual
+        R$ <%= @product.current_price %>
+        <br>
+        Preço Mínimo
+        R$ <%= @product.price_goal %>
       </div>
 
     <div class="itens">
      <div> <i class="fas fa-sort-amount-down"></i> </div>
-      <div> Faltam <%= @product.avaiable_items %> itens
-      para atingir o preço mínimo! </div>
+      <div> <strong> Faltam <%= @product.avaiable_items %> itens
+      para atingir o preço mínimo!</strong> </div>
 
     <div class="time">
       <div id="div1" class="fa"></div>
@@ -95,6 +97,47 @@ setInterval(hourglass, 3000);
   </div>
 
   <%= link_to "Comprar por R$ #{@product.current_price}0!!", new_product_purchase_path(@product), class: "btn btn-success" %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class= "row" >
+    <div id= "bar" class="ldBar label-center" data-preset="energy"  data-value="-<%= @product.current_price %>" data-max="-<%= @product.price_goal %>" data-min="-<%= @product.initial_price %>"
+         style="width:50%;
+                height:50%;
+                margin:auto">
+      </script>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </main>
 
