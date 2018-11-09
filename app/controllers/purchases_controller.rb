@@ -7,7 +7,6 @@ class PurchasesController < ApplicationController
   def show
     @purchase = Purchase.find(params[:id])
     @purchase = Purchase.new
-    @product = @purchase.product
   end
 
   def new
