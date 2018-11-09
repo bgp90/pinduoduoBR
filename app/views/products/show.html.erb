@@ -3,7 +3,23 @@
     <!-- COLUMN LEFT-->
    <div class="col-sm-6">
      <!-- discount tag-->
-      <div class="badge-discount">
+      <div class="badge-discount" style= "
+    border-radius: 18%;
+    background: #F5B82E;
+    width: 122px;
+    height: 72px;
+    text-align: center;
+    padding-top: 7px;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    z-index: 20;
+    right: 30px;
+    top: 15px;
+"
+
+
+       >
         <strong><%= ((@product.avg_price - @product.current_price)/ @product.avg_price * 100).round(2) %>%</strong>
         de desconto!
       </div>
