@@ -58,9 +58,11 @@
           <!-- <li class= "cat-list-item"> -->
             <div class="large-box text-center">
               <div class="pa-glist-item-goods">
+                <%=link_to product do %>
                 <div class="act-goods-img">
-                  <img class="pa-goods-img" alt="goods" src="http://t00img.yangkeduo.com/goods/images/2018-10-27/ff91fb5507cd257b14054ab5326247e0.jpeg@750w_1l_50Q.src">
+                  <%= image_tag "http://t00img.yangkeduo.com/goods/images/2018-10-27/ff91fb5507cd257b14054ab5326247e0.jpeg@750w_1l_50Q.src", class: "pa-goods-img" %>
                 </div>
+                <% end %>
                   <!-- <h3><%= link_to product.name, product_path(product) %></h3> -->
                   <div class="act-goods-txt">
                   <p class="act-goods-name">Casaco Gucci Feminino</p>
