@@ -9,7 +9,7 @@
       <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/assets/female_fashion.jpg');">
        <div class="banner-content">
           <h1>Vestuário Feminino</h1>
-          <p>O melhor da internet está no no precito</p>
+          <p>O melhor da internet está no no Precito</p>
       </div>
       </div>
     </div>
@@ -67,9 +67,8 @@
                   <div class="act-goods-txt">
                   <p class="act-goods-name"> <%= product.name %></p>
                   <div class="act-goods-prices">
-                    <span class="act-goods-price"><b>￥</b><span>46.9</span></span>
-                    <span class="act-goods-mprice">￥<span>128</span></span>
-                    <span class="act-goods-cnt">已团<span>6040</span>件</span>
+                    <s class="cui-price-original-same-size c-txt-gray-dk">R$<%=product.initial_price%></s>
+                    <span class="index-goods-mprice">por R$<span><%=product.current_price%></span></span>
                   </div>
                 </div>
               </div>
