@@ -18,7 +18,16 @@ class PurchasesController < ApplicationController
     @purchase.user = current_user
     @purchase.value = @purchase.quantity * @product.current_price
     if @purchase.save
+      @product.sold_count = @product.sold_count + @purchase.quantity
+      @product.avaiable_items = @product.avaiable_items - @purchase.quantity
+
+      disc_per_purchase = ((@product.initial_price - @product.price_goal)/(@product.sold_count + @product.avaiable_items)) * @purchase.quantity
+
+      @product.current_price = @product.current_price - disc_per_purchase
+
+      @product.save
       redirect_to purchase_path(@purchase), notice: "Thanks for buying"
+
     else
       flash[:alert]="Insira a quantidade"
       render :new
