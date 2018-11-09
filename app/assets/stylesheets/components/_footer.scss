@@ -1,13 +1,18 @@
 .footer {
-    background: #f39c12;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    padding: 1px 50px;
-    color: white;
+  background: #f39c12;
+  bottom: -120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  color: white;
+  position: relative;
+  width: 100%;
+  flex: 0 0 auto;
+  padding-right: 20px;
 }
+
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -21,3 +26,4 @@
 .footer-links a:hover {
   color: #44C8D5;
 }
+
