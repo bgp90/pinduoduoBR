@@ -5,7 +5,7 @@
    <div class="col-sm-6">
      <!-- discount tag-->
       <div class="badge-discount">
-        <strong><%= (@product.avg_price - @product.current_price)/ @product.avg_price * 100 %>%</strong>
+        <strong><%= ((@product.avg_price - @product.current_price)/ @product.avg_price * 100).round(2) %>%</strong>
         de desconto!
       </div>
     <!-- carrousels-->
@@ -104,23 +104,16 @@ setInterval(hourglass, 3000);
 
 
 
-
-
-
-
-
-
-
-
-
-
   <div class= "row" >
     <div id= "bar" class="ldBar label-center" data-preset="energy"  data-value="-<%= @product.current_price %>" data-max="-<%= @product.price_goal %>" data-min="-<%= @product.initial_price %>"
          style="width:50%;
-                height:50%;
-                margin:auto">
+                height:50%; ">
       </script>
     </div>
+
+
+
+    <p class="preco">     Now the price is R$<%= @product.current_price%></p>
   </div>
 
 

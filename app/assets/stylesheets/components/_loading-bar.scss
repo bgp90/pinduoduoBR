@@ -1,7 +1,12 @@
 .ldBar{position:relative;
+  margin-left: 0px;
       }
 
-.ldBar.label-center > .ldBar-label{position:absolute;top:130%;left:61%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);text-shadow:0 0 3px #fff}
+.preco{
+      padding-left: 35px;
+}
+
+.ldBar.label-center > .ldBar-label{opacity:0;  position:absolute;top:130%;left:61%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);text-shadow:0 0 3px #fff}
 
 .ldBar-label:after{content:" current price"; display:block;     color: #aaa;
     margin-left: 4px;
