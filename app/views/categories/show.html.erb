@@ -60,7 +60,7 @@
               <div class="pa-glist-item-goods">
                 <%=link_to product do %>
                 <div class="act-goods-img">
-                  <%= image_tag "http://t00img.yangkeduo.com/goods/images/2018-10-27/ff91fb5507cd257b14054ab5326247e0.jpeg@750w_1l_50Q.src", class: "pa-goods-img" %>
+                  <%= image_tag product.main_image, class: "pa-goods-img" %>
                 </div>
                 <% end %>
                   <!-- <h3><%= link_to product.name, product_path(product) %></h3> -->
